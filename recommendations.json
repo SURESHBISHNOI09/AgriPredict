@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "type": "irrigation",
+    "title": "Optimal Irrigation Schedule",
+    "description": "Based on soil moisture and weather forecast, irrigate corn fields on Tuesday and Friday.",
+    "priority": "High",
+    "crop": "Corn",
+    "date": "2025-08-24"
+  },
+  {
+    "id": 2,
+    "type": "fertilizer",
+    "title": "Nitrogen Application",
+    "description": "Soil analysis indicates low nitrogen levels. Apply 40 kg/ha nitrogen fertilizer.",
+    "priority": "Medium",
+    "crop": "Wheat",
+    "date": "2025-08-26"
+  },
+  {
+    "id": 3,
+    "type": "pest_control",
+    "title": "Aphid Treatment",
+    "description": "High aphid risk detected for soybeans. Consider organic pesticide application.",
+    "priority": "High",
+    "crop": "Soybeans",
+    "date": "2025-08-23"
+  },
+  {
+    "id": 4,
+    "type": "harvest",
+    "title": "Harvest Window",
+    "description": "Weather conditions favorable for rice harvest in the next 5-7 days.",
+    "priority": "Medium",
+    "crop": "Rice",
+    "date": "2025-08-28"
+  }
+]
