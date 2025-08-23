@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriPredict – Crop Yield & Pest Outbreak Forecast</title>
+    <meta name="description" content="Forecast your harvest. Guard against pests. Advanced agricultural AI for smarter farming decisions.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🌾</span>
+                    <span class="logo-text">AgriPredict</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#dashboard" class="nav-link">Dashboard</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="nav-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="https://pplx-res.cloudinary.com/image/upload/v1755335802/pplx_project_search_images/13078b2d09c63eb7f18f35fe29a06af2e5a9147c.png" alt="Agricultural Technology" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Forecast your harvest. Guard against pests.</h1>
+                <p class="hero-subtitle">Advanced AI-powered agriculture platform providing precise yield predictions, pest risk assessments, and tailored farming recommendations.</p>
+                <div class="hero-actions">
+                    <button class="btn btn--primary btn--lg" onclick="scrollToSection('dashboard')">Get Your Forecast</button>
+                    <button class="btn btn--secondary btn--lg" onclick="scrollToSection('how-it-works')">How It Works</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Farmers Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">94%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25%</div>
+                        <div class="stat-label">Yield Increase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How AgriPredict Works</h2>
+                <p>Our advanced AI platform combines satellite imagery, weather data, and machine learning to provide accurate agricultural forecasts.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--color-bg-3);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Predict Yield</h3>
+                    <p>Advanced machine learning models analyze soil conditions, weather patterns, and historical data to forecast crop yields with 94% accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--color-bg-4);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Assess Pest Risk</h3>
+                    <p>Real-time pest outbreak prediction using environmental factors, crop vulnerability, and regional pest activity data to prevent crop losses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--color-bg-1);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3>Get Tailored Advice</h3>
+                    <p>Personalized recommendations for irrigation, fertilization, and pest control based on your specific farm conditions and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: var(--color-bg-6);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6"/>
+                            <path d="m21 12-6-3-6 3-6-3"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Continuous monitoring of weather conditions, soil moisture, and crop health through satellite imagery and IoT sensors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Preview -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Dashboard Preview</h2>
+                <p>Experience our powerful analytics and forecasting tools in action.</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="dashboard-tabs">
+                    <button class="tab-button active" onclick="switchTab('yield')">Yield Predictions</button>
+                    <button class="tab-button" onclick="switchTab('pest')">Pest Risk</button>
+                    <button class="tab-button" onclick="switchTab('weather')">Weather Forecast</button>
+                    <button class="tab-button" onclick="switchTab('recommendations')">Recommendations</button>
+                </div>
+                
+                <div class="dashboard-content">
+                    <!-- Yield Predictions Tab -->
+                    <div id="yield-tab" class="tab-content active">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h3>Crop Yield Forecast</h3>
+                                <div class="chart-container" style="position: relative; height: 300px;">
+                                    <canvas id="yieldChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>Quick Prediction</h3>
+                                <form class="prediction-form" onsubmit="calculateYield(event)">
+                                    <div class="form-group">
+                                        <label class="form-label">Crop Type</label>
+                                        <select class="form-control" id="cropSelect">
+                                            <option value="Wheat">Wheat</option>
+                                            <option value="Corn">Corn</option>
+                                            <option value="Soybeans">Soybeans</option>
+                                            <option value="Rice">Rice</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Region</label>
+                                        <select class="form-control" id="regionSelect">
+                                            <option value="Iowa, USA">Iowa, USA</option>
+                                            <option value="Illinois, USA">Illinois, USA</option>
+                                            <option value="Nebraska, USA">Nebraska, USA</option>
+                                            <option value="Punjab, India">Punjab, India</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Soil pH</label>
+                                        <input type="number" class="form-control" id="soilPh" min="5" max="8" step="0.1" value="6.5">
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Calculate Yield</button>
+                                </form>
+                                <div id="yieldResult" class="prediction-result hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pest Risk Tab -->
+                    <div id="pest-tab" class="tab-content">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h3>Pest Risk Assessment</h3>
+                                <div class="chart-container" style="position: relative; height: 300px;">
+                                    <canvas id="pestChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>Risk Alerts</h3>
+                                <div class="risk-alerts">
+                                    <div class="alert alert--high">
+                                        <div class="alert-icon">⚠️</div>
+                                        <div class="alert-content">
+                                            <h4>High Risk: Aphids</h4>
+                                            <p>Wheat crops in Kansas, USA - Risk Score: 78</p>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert--medium">
+                                        <div class="alert-icon">⚡</div>
+                                        <div class="alert-content">
+                                            <h4>Medium Risk: Corn Borer</h4>
+                                            <p>Corn crops in Iowa, USA - Risk Score: 45</p>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert--low">
+                                        <div class="alert-icon">✅</div>
+                                        <div class="alert-content">
+                                            <h4>Low Risk: Armyworm</h4>
+                                            <p>Soybeans in Illinois, USA - Risk Score: 22</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather Forecast Tab -->
+                    <div id="weather-tab" class="tab-content">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h3>Weather Forecast</h3>
+                                <div class="chart-container" style="position: relative; height: 300px;">
+                                    <canvas id="weatherChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>7-Day Outlook</h3>
+                                <div class="weather-cards">
+                                    <div class="weather-card">
+                                        <div class="weather-date">Aug 24</div>
+                                        <div class="weather-temp">28.5°C / 18.2°C</div>
+                                        <div class="weather-desc">Partly Cloudy</div>
+                                        <div class="weather-precipitation">💧 2.5mm</div>
+                                    </div>
+                                    <div class="weather-card">
+                                        <div class="weather-date">Aug 25</div>
+                                        <div class="weather-temp">30.1°C / 19.8°C</div>
+                                        <div class="weather-desc">Sunny</div>
+                                        <div class="weather-precipitation">☀️ 0mm</div>
+                                    </div>
+                                    <div class="weather-card">
+                                        <div class="weather-date">Aug 26</div>
+                                        <div class="weather-temp">26.7°C / 16.5°C</div>
+                                        <div class="weather-desc">Rainy</div>
+                                        <div class="weather-precipitation">🌧️ 8.2mm</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations Tab -->
+                    <div id="recommendations-tab" class="tab-content">
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card full-width">
+                                <h3>Personalized Recommendations</h3>
+                                <div class="recommendations-list">
+                                    <div class="recommendation-item priority-high">
+                                        <div class="recommendation-header">
+                                            <div class="recommendation-type">🌊 Irrigation</div>
+                                            <div class="priority-badge priority-high">High Priority</div>
+                                        </div>
+                                        <h4>Optimal Irrigation Schedule</h4>
+                                        <p>Based on soil moisture and weather forecast, irrigate corn fields on Tuesday and Friday.</p>
+                                        <div class="recommendation-meta">Corn • Today</div>
+                                    </div>
+                                    <div class="recommendation-item priority-medium">
+                                        <div class="recommendation-header">
+                                            <div class="recommendation-type">🌱 Fertilizer</div>
+                                            <div class="priority-badge priority-medium">Medium Priority</div>
+                                        </div>
+                                        <h4>Nitrogen Application</h4>
+                                        <p>Soil analysis indicates low nitrogen levels. Apply 40 kg/ha nitrogen fertilizer.</p>
+                                        <div class="recommendation-meta">Wheat • 2 days ago</div>
+                                    </div>
+                                    <div class="recommendation-item priority-high">
+                                        <div class="recommendation-header">
+                                            <div class="recommendation-type">🦗 Pest Control</div>
+                                            <div class="priority-badge priority-high">High Priority</div>
+                                        </div>
+                                        <h4>Aphid Treatment</h4>
+                                        <p>High aphid risk detected for soybeans. Consider organic pesticide application.</p>
+                                        <div class="recommendation-meta">Soybeans • Yesterday</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section class="why-it-matters">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why AgriPredict Matters</h2>
+                <p>Empowering farmers worldwide with data-driven insights for sustainable agriculture.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">25%</div>
+                    <div class="impact-label">Average Yield Increase</div>
+                    <div class="impact-description">Farmers using AgriPredict see significant improvements in crop productivity.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">18%</div>
+                    <div class="impact-label">Cost Reduction</div>
+                    <div class="impact-description">Optimized resource usage reduces operational costs while maintaining quality.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">50,000+</div>
+                    <div class="impact-label">Farmers Served</div>
+                    <div class="impact-description">Growing community of agricultural professionals worldwide.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">94%</div>
+                    <div class="impact-label">Prediction Accuracy</div>
+                    <div class="impact-description">Industry-leading precision in agricultural forecasting and risk assessment.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section id="features" class="features-highlight">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Agricultural Intelligence</h2>
+                <p>Cutting-edge technology for modern farming challenges.</p>
+            </div>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <div class="highlight-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1754646910/pplx_project_search_images/539de2f24a266be91cc4f2234f20fc00afb9497d.png" alt="Farm AI Dashboard">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>AI-Powered Analytics</h3>
+                        <p>Machine learning algorithms analyze vast amounts of agricultural data including satellite imagery, soil sensors, and weather patterns to provide actionable insights.</p>
+                        <ul>
+                            <li>Real-time crop health monitoring</li>
+                            <li>Predictive yield modeling</li>
+                            <li>Disease and pest outbreak detection</li>
+                            <li>Soil nutrient optimization</li>
+                        </ul>
+                        <button class="btn btn--primary" onclick="showComingSoon()">Explore AI Features</button>
+                    </div>
+                </div>
+                <div class="highlight-item reverse">
+                    <div class="highlight-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755953080/pplx_project_search_images/56771212a6125a691f385f9f5ff1c9e70af39835.png" alt="Drone Technology">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>Precision Agriculture Tools</h3>
+                        <p>Integration with drone technology and IoT sensors enables precise field mapping and automated crop monitoring for optimal farm management.</p>
+                        <ul>
+                            <li>Drone-assisted field surveying</li>
+                            <li>Automated irrigation systems</li>
+                            <li>Variable rate application</li>
+                            <li>GPS-guided equipment</li>
+                        </ul>
+                        <button class="btn btn--primary" onclick="showComingSoon()">Learn More</button>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1754777331/pplx_project_search_images/23f74d11505b9ff15ce7f50eeadde5d635469036.png" alt="Sustainable Farming">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>Sustainable Farming Solutions</h3>
+                        <p>Environmental stewardship through data-driven decisions that optimize resource usage while maintaining soil health and biodiversity.</p>
+                        <ul>
+                            <li>Water conservation strategies</li>
+                            <li>Organic pest management</li>
+                            <li>Soil health improvement</li>
+                            <li>Carbon footprint reduction</li>
+                        </ul>
+                        <button class="btn btn--primary" onclick="showComingSoon()">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Developer Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About the Developer</h2>
+                <p>Meet the mind behind AgriPredict - transforming agriculture through innovative technology.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder">
+                            <span class="avatar-initial">SB</span>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <h3>Suresh Bishnoi</h3>
+                        <p class="about-title">Full-Stack Data Scientist & Web Engineer</p>
+                        <p class="about-description">
+                            Passionate about leveraging AI and machine learning to solve real-world agricultural challenges. 
+                            Specialized in building intelligent web applications that empower farmers with data-driven insights 
+                            for sustainable and profitable farming practices.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number"></div>
+                                <div class="stat-label"></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects Delivered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10k+</div>
+                                <div class="stat-label">Users Impacted</div>
+                            </div>
+                        </div>
+                        <div class="about-contact">
+                            <a href="mailto:gyanshri68@gmail.com" class="contact-item">
+                                <span class="contact-icon">✉️</span>
+                                <span>gyanshri68@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/SURESHBISHNOI09" target="_blank" class="contact-item">
+                                <span class="contact-icon">🔗</span>
+                                <span>SURESHBISHNOI09</span>
+                            </a>
+                            <a href="https://linkedin.com/in/sureshbishnoi09" target="_blank" class="contact-item">
+                                <span class="contact-icon">💼</span>
+                                <span>sureshbishnoi09</span>
+                            </a>
+                        </div>
+                        <div class="about-skills">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Full-Stack Development</span>
+                            <span class="skill-tag">Agricultural Tech</span>
+                            <span class="skill-tag">AI Solutions</span>
+                            <span class="skill-tag">Web Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🌾</span>
+                        <span class="logo-text">AgriPredict</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural insights for sustainable and profitable farming.</p>
+                    <div class="social-links">
+                        <a href="mailto:gyanshri68@gmail.com" class="social-link" title="Email">📧</a>
+                        <a href="https://github.com/SURESHBISHNOI09" target="_blank" class="social-link" title="GitHub">🔗</a>
+                        <a href="https://linkedin.com/in/sureshbishnoi09" target="_blank" class="social-link" title="LinkedIn">💼</a>
+                        <a href="#" onclick="showComingSoon()" class="social-link" title="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" onclick="showComingSoon()">Documentation</a></li>
+                        <li><a href="#" onclick="showComingSoon()">API Reference</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Blog</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Developer</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Careers</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showComingSoon()">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><strong>Developer:</strong> Suresh Bishnoi</p>
+                        <p>✉️ <a href="mailto:gyanshri68@gmail.com">gyanshri68@gmail.com</a></p>
+                        <p>🔗 <a href="https://github.com/SURESHBISHNOI09" target="_blank">GitHub</a></p>
+                        <p>💼 <a href="https://linkedin.com/in/sureshbishnoi09" target="_blank">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AgriPredict. Developed with ❤️ by <a href="#about">Suresh Bishnoi</a>. Empowering farmers worldwide through AI technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeComingSoon()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🚀 Coming Soon!</h3>
+                <button class="modal-close" onclick="closeComingSoon()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This feature is currently under development. Our advanced AI models are being trained to provide you with even more accurate and comprehensive agricultural insights.</p>
+                <div class="coming-soon-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🤖</span>
+                        <span>Advanced AI Models</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span>Enhanced Analytics</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🌐</span>
+                        <span>Real-time Integration</span>
+                    </div>
+                </div>
+                <p><strong>Expected Launch:</strong> Q2 2025</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--primary" onclick="closeComingSoon()">Got It!</button>
+                <button class="btn btn--secondary" onclick="showNotifyModal()">Notify Me</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
