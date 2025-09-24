@@ -4,7 +4,7 @@
 
 AgriPredict is a cutting-edge agricultural intelligence platform that leverages machine learning and real-time data to provide farmers with accurate crop yield predictions and pest outbreak forecasting. Our mission is to empower farmers with data-driven insights to optimize their harvest and protect their crops.
 
-**Live Demo:** [https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/20816da7e5343b36e90853a8e09c79b2/e63a096d-6574-4222-a51f-3b242dab96f1/index.html](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/20816da7e5343b36e90853a8e09c79b2/e63a096d-6574-4222-a51f-3b242dab96f1/index.html)
+**Live Demo:** [https://agripredict-crop-yield-pest.netlify.app/]
 
 ## ✨ Features
 
@@ -38,7 +38,7 @@ AgriPredict is a cutting-edge agricultural intelligence platform that leverages 
 - **Weather Data**: OpenWeatherMap API
 
 ### Deployment
-- **Frontend**: Static hosting (Vercel/Netlify ready)
+- **Frontend**: Static hosting (/Netlify ready)
 - **Backend**: Render/Heroku deployment ready
 - **Database**: Supabase cloud PostgreSQL
 
@@ -221,8 +221,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Website**: [AgriPredict Platform](https://agripredict.com)
 - **Email**: support@agripredict.com
-- **Documentation**: [docs.agripredict.com](https://docs.agripredict.com)
-- **Community**: [community.agripredict.com](https://community.agripredict.com)
+- **Documentation**: [docs.agripredict.com](currently working on this)
+- **Community**: [community.agripredict.com] (currently working on this)
 
 ---
 
